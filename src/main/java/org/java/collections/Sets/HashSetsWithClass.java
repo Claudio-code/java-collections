@@ -18,6 +18,12 @@ public class HashSetsWithClass {
         course.enrollStudent(new Student("edson", 6431));
         course.enrollStudent(new Student("casa", 241));
 
+        final var hasStudent = course
+                .getStudents()
+                .contains(new Student("ana", 231));
+
+        System.out.println();
+        System.out.println("has ana in course: " + hasStudent);
         System.out.println(course.getStudents());
         System.out.println(course.getStudents().size());
     }

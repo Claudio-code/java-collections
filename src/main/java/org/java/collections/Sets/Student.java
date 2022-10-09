@@ -23,4 +23,18 @@ public class Student {
         return "[Student: " + name + ", enroll: " + enroll + ", hascode: " + hashCode() + "]";
     }
 
+    @Override
+    public boolean equals(Object object) {
+        if (object instanceof Student) {
+            final var student = (Student) object;
+            return name.equals(student.getName()) && enroll.equals(student.getEnroll());
+        }
+        return false;
+    }
+
+    @Override
+    public int hashCode() {
+        return name.hashCode() + enroll.hashCode();
+    }
+
 }
