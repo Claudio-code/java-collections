@@ -2,10 +2,10 @@ package org.java.collections.arraylist;
 
 public class Classroom implements Comparable<Classroom> {
 
-    private String name;
-    private int timeMinutes;
+    private final String name;
+    private final int timeMinutes;
 
-    public Classroom(String name, int timeMinutes) {
+    public Classroom(final String name, final int timeMinutes) {
         this.name = name;
         this.timeMinutes = timeMinutes;
     }
@@ -19,7 +19,7 @@ public class Classroom implements Comparable<Classroom> {
     }
 
     @Override
-    public int compareTo(Classroom otherClassroom) {
+    public int compareTo(final Classroom otherClassroom) {
         return name.compareTo(otherClassroom.getName());
     }
 
@@ -27,5 +27,5 @@ public class Classroom implements Comparable<Classroom> {
     public String toString() {
         return "[Classroom: " + name + ", time in minutes: " + timeMinutes + "]";
     }
-    
+
 }
