@@ -13,7 +13,7 @@ public class HashSetsSimple {
         students.add("alexandro");
         students.add("marcio");
 
-        students.forEach(System.out::println);
+        System.out.println(students);
         System.out.println(students.size());
     }
 
