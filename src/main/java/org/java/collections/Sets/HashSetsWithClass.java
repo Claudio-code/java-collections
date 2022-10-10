@@ -13,14 +13,14 @@ public class HashSetsWithClass {
             new Classroom("math", 10),
             new Classroom("geography", 50)
         ));
-        course.enrollStudent(new Student("ana", 231));
-        course.enrollStudent(new Student("marcio", 9211));
-        course.enrollStudent(new Student("edson", 6431));
-        course.enrollStudent(new Student("casa", 241));
+        course.enrollStudent(new Student("ana", 231, 22));
+        course.enrollStudent(new Student("marcio", 9211, 23));
+        course.enrollStudent(new Student("edson", 6431, 12));
+        course.enrollStudent(new Student("casa", 241, 45));
 
         final var hasStudent = course
                 .getStudents()
-                .contains(new Student("ana", 231));
+                .contains(new Student("ana", 231, 22));
 
         System.out.println();
         System.out.println("has ana in course: " + hasStudent);

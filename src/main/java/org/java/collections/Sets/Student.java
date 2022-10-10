@@ -1,13 +1,15 @@
 package org.java.collections.Sets;
 
-public class Student {
+public class Student implements Comparable<Student> {
 
     private final String name;
     private final Integer enroll;
+    private final Integer yearsOlder;
 
-    public Student(String name, int enroll) {
+    public Student(String name, int enroll, Integer yearsOlder) {
         this.name = name;
         this.enroll = enroll;
+        this.yearsOlder = yearsOlder;
     }
 
     public String getName() {
@@ -16,6 +18,10 @@ public class Student {
 
     public Integer getEnroll() {
         return enroll;
+    }
+
+    public Integer getYearsOlder() {
+        return yearsOlder;
     }
 
     @Override
@@ -35,6 +41,11 @@ public class Student {
     @Override
     public int hashCode() {
         return name.hashCode() + enroll.hashCode();
+    }
+
+    @Override
+    public int compareTo(Student student) {
+        return yearsOlder.compareTo(student.getYearsOlder());
     }
 
 }
